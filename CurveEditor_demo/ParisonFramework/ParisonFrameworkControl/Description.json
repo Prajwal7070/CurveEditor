@@ -1,0 +1,176 @@
+{
+  "$schema": "../.hmiframework/Schema/ControlDescription.Schema.json",
+  "apiVersion": 1,
+  "name": "ParisonFrameworkControl",
+  "namespace": "TcHmi.Controls.ParisonFramework",
+  "displayName": "ParisonFrameworkControl",
+  "version": {
+    "full": "1.0.0.0",
+    "major": 1,
+    "minor": 0,
+    "revision": 0,
+    "build": 0
+  },
+  "visible": true,
+  "themeable": "Standard",
+  "base": "TcHmi.Controls.System.TcHmiControl",
+  "description": "This description text will be used as a Tooltip in Visual Studio.",
+  "properties": {
+    "containerControl": false,
+    "geometry": {
+      "width": 300,
+      "height": 450
+    }
+  },
+  "template": "Template.html",
+  "icons": [
+    {
+      "name": "Icons/16x16.png",
+      "width": 16,
+      "height": 16
+    }
+  ],
+  "dependencyFiles": [
+    {
+      "name": "ParisonFrameworkControl.js",
+      "type": "JavaScript",
+      "description": "Contains all the main logic."
+    },
+    {
+      "name": "Style.css",
+      "type": "Stylesheet",
+      "description": "Theme independent style"
+    },
+    {
+      "name": "Libs/three.js",
+      "type": "JavaScript",
+      "description": "Three.js library"
+    },
+    {
+      "name": "Libs/OrbitControls.js",
+      "type": "JavaScript",
+      "description": "OrbitControls for Three.js"
+    }
+  ],
+  "themes": {
+    "Base": {
+      "resources": [
+        {
+          "name": "Themes/Base/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    },
+    "Base-Dark": {
+      "resources": [
+        {
+          "name": "Themes/Base-Dark/Style.css",
+          "type": "Stylesheet",
+          "description": "Theme dependent style"
+        }
+      ]
+    }
+  },
+  "attributes": [
+    {
+      "name": "data-tchmi-points",
+      "displayName": "Fixed Points",
+      "propertyName": "FixedPoints",
+      "propertyGetterName": "getFixedPoints",
+      "propertySetterName": "setFixedPoints",
+      "visible": true,
+      "description": "List of fixed points for the parison framework control.",
+      "category": "Data",
+      "heritable": true,
+      "type": "tchmi:framework#/definitions/FixedPointList",
+      "bindable": true,
+      "defaultValue": null,
+      "defaultValueInternal": null
+    },
+    {
+      "name": "data-tchmi-diegeometry",
+      "displayName": "Die Geometry",
+      "propertyName": "DieGeometry",
+      "propertyGetterName": "getDieGeometry",
+      "propertySetterName": "setDieGeometry",
+      "visible": true,
+      "description": "Select 'DieMove' (outer variable, inner constant) or 'PinMove' (outer constant, inner variable).",
+      "category": "Data",
+      "heritable": true,
+      "type": "tchmi:framework#/definitions/DieGeometryMode",
+      "bindable": true,
+      "defaultValue": "DieMove"
+    },
+    {
+      "name": "data-tchmi-visualbasicthickness",
+      "displayName": "Visual Basic Thickness",
+      "propertyName": "VisualBasicThickness",
+      "propertyGetterName": "getVisualBasicThickness",
+      "propertySetterName": "setVisualBasicThickness",
+      "visible": true,
+      "description": "Control to Visualize thickness of basic layed band.",
+      "category": "Data",
+      "heritable": true,
+      "type": "tchmi:framework#/definitions/ParisonThickness",
+      "bindable": true,
+      "defaultValue": 3.0
+    },
+    {
+      "name": "data-tchmi-minvisualbasicthickness",
+      "displayName": "Min Visual Basic Thickness",
+      "propertyName": "MinVisualBasicThickness",
+      "propertyGetterName": "getMinVisualBasicThickness",
+      "propertySetterName": "setMinVisualBasicThickness",
+      "visible": true,
+      "description": "Minimum allowed thickness for the basic  band (Safety clamp)",
+      "category": "Data",
+      "heritable": true,
+      "type": "tchmi:framework#/definitions/ParisonThickness",
+      "bindable": true,
+      "defaultValue": 1.0
+    },
+    {
+      "name": "data-tchmi-spoolcorethickness",
+      "displayName": "Spool Core Thickness",
+      "propertyName": "SpoolCoreThickness",
+      "propertyGetterName": "getSpoolCoreThickness",
+      "propertySetterName": "setSpoolCoreThickness",
+      "visible": true,
+      "description": "Thickness of the spool core tube wall",
+      "category": "Data",
+      "heritable": true,
+      "type": "tchmi:framework#/definitions/ParisonThickness",
+      "bindable": true,
+      "defaultValue": 2.0
+    },
+    {
+        "name": "data-tchmi-spoolcoreinner",
+      "displayName": "Spool Core Inner Radius",
+      "propertyName": "SpoolCoreInner",
+      "propertyGetterName": "getSpoolCoreInner",
+      "propertySetterName": "setSpoolCoreInner",
+      "visible": true,
+      "description": "Inner radius of the hollow spool core",
+      "category": "Data",
+      "heritable": true,
+      "type": "tchmi:framework#/definitions/ParisonRadius",
+      "bindable": true,
+      "defaultValue": 5.0
+    }
+  ],
+  "attributeCategories": [
+    {
+      "name": "Data",
+      "description": "Data related attributes",
+      "displayPriority": 100
+    }
+  ],
+  "functions": [],
+  "events": [],
+  "dataTypes": [
+    {
+      "schema": "Schema/Types.Schema.json"
+    }
+  ]
+}
