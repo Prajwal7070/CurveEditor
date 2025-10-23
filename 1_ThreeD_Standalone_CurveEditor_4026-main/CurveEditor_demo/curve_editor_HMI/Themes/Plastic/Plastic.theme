@@ -1,0 +1,22 @@
+{
+  "controlTypeValues": {},
+  "controlClassValues": {
+    "inputbox_toggle_switch": {
+      "attributes": {},
+      "themedResources": {}
+    },
+    "SliderTab": {
+      "attributes": {},
+      "themedResources": {}
+    },
+    "Tiles": {
+      "attributes": {},
+      "themedResources": {}
+    },
+    "TilesHeadline": {
+      "attributes": {},
+      "themedResources": {}
+    }
+  },
+  "$schema": "./../../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/Schema/ThemeDescription.Schema.json"
+}

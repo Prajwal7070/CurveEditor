@@ -1,0 +1,66 @@
+<div id="Desktop" data-tchmi-type="TcHmi.Controls.System.TcHmiView" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-mode="Content" data-tchmi-min-width="100" data-tchmi-min-width-unit="%" data-tchmi-height-mode="Content" data-tchmi-min-height="100" data-tchmi-min-height-unit="%">
+<div id="Configurator_1" data-tchmi-type="TcHmi.Controls.Plastic.Configurator" data-tchmi-displayunitschanged="false" data-tchmi-height="30" data-tchmi-height-unit="px" data-tchmi-keyboardheight="250" data-tchmi-keyboardlayout="Beckhoff.TwinCAT.HMI.Plastic.Controls/Configuration/InputBox_NumPad.keyboard.json" data-tchmi-keyboardwidth="200" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-logrecipechangesbyuser="false" data-tchmi-recipeautosavedelay="2" data-tchmi-recipebackupduration="10" data-tchmi-systemunitschanged="false" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-unitconfig="Beckhoff.TwinCAT.HMI.Plastic.Controls/Configuration/Unit_Config.json" data-tchmi-width="36" data-tchmi-width-unit="px">
+<script data-tchmi-target-attribute="data-tchmi-unitgroups" type="application/json">
+[]
+</script>
+<script data-tchmi-target-attribute="data-tchmi-allunits" type="application/json">
+[]
+</script>
+
+</div>
+<div id="TcHmiRegion_1" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-height="1100" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="1758" data-tchmi-width-unit="px" data-tchmi-target-content="Content/WTC/WTC.content">
+</div>
+<div id="ParisonFrameworkControl_1" data-tchmi-type="TcHmi.Controls.ParisonFramework.ParisonFrameworkControl" data-tchmi-height="603" data-tchmi-height-unit="px" data-tchmi-left="1194" data-tchmi-left-unit="px" data-tchmi-top="487" data-tchmi-top-unit="px" data-tchmi-width="570" data-tchmi-width-unit="px" data-tchmi-points="%s%ADS.PLC1.MAIN.fbWTC1.aSetPos%/s%" data-tchmi-diegeometry="PinMove">
+
+
+</div>
+<div id="TcHmiCombobox_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-auto-focus-out="True" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="1369" data-tchmi-left-unit="px" data-tchmi-top="501" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px" data-tchmi-selected-id="1">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
+</script>
+
+
+
+
+<script data-tchmi-target-attribute="data-tchmi-src-data" type="application/json">
+[
+  {
+    "id": 0.0,
+    "text": "DieMove",
+    "value": "DieMove"
+  },
+  {
+    "id": 1.0,
+    "text": "PinMove",
+    "value": "PinMove"
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "%ctx%owner::Id|EventRegistrationMode=Resolve%/ctx%.onSelectionChanged",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%ParisonFrameworkControl_1::DieGeometry%/ctrl%",
+        "value": {
+          "objectType": "Symbol",
+          "valueType": "tchmi:framework#/definitions/DieGeometryMode",
+          "symbolExpression": "%ctrl%TcHmiCombobox_1::SelectedValue%/ctrl%"
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+</div>
+</div>

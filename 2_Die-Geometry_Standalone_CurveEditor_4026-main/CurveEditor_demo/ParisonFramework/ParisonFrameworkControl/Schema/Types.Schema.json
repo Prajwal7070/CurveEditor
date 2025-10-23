@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "definitions": {
+    "TcHmi.Controls.ParisonFramework.ParisonFrameworkControl": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "ParisonFrameworkControl",
+      "frameworkControlNamespace": "TcHmi.Controls.ParisonFramework",
+      "properties": {
+        "data-tchmi-diegeometry": {
+          "description": "Selects the die geometry mode (PinMove or DieMove).",
+          "$ref": "#/definitions/DieGeometryMode",
+          "default": "PinMove"
+        }
+      }
+    },
+    "DieGeometryMode": {
+        "$schema": "http://json-schema.org/draft-04/schema",
+      "title": "Die Geometry Mode",
+      "description": "Defines available die geometry modes.",
+      "type": "string",
+      "enum": [
+        "PinMove",
+        "DieMove"
+      ]
+    }
+  }
+}
