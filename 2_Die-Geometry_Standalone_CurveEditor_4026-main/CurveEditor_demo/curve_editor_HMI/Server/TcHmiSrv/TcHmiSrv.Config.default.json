@@ -1441,6 +1441,104 @@
                         "ActiveMarkers": false,
                         "AvoidNegativeValues": true,
                         "BaseAxisMax": 100,
+                        "BaseComponent": 20.0,
+                        "CalculateSlopes": true,
+                        "FixedPointList": [
+                            {
+                                "Base": 0.0,
+                                "Value": 22.0937
+                            },
+                            {
+                                "Base": 24.0,
+                                "Value": 75.8495
+                            },
+                            {
+                                "Base": 41.0,
+                                "Value": 45.9095
+                            },
+                            {
+                                "Base": 60.0,
+                                "Value": 82.0732
+                            },
+                            {
+                                "Base": 74.0,
+                                "Value": 49.2734
+                            },
+                            {
+                                "Base": 91.0,
+                                "Value": 64.9162
+                            }
+                        ],
+                        "InterpolationMode": "PolynomialOfDegree3",
+                        "MarkerLength": 0.0,
+                        "MarkerList": [
+                            {
+                                "Base": 37.0
+                            },
+                            {
+                                "Base": 40.0
+                            }
+                        ],
+                        "MarkerWidth": 0.0,
+                        "ProfileComponent": 82.0732,
+                        "StepSize": 1.0,
+                        "TransitionMode": "StartAndEndRepeated",
+                        "ValueAxisMax": 100.0,
+                        "ValueAxisMin": 0.0
+                    },
+                    {
+                        "ActiveMarkers": false,
+                        "AvoidNegativeValues": true,
+                        "BaseAxisMax": 100,
+                        "BaseComponent": 20.0,
+                        "CalculateSlopes": true,
+                        "FixedPointList": [
+                            {
+                                "Base": 0.0,
+                                "Value": 23.9781
+                            },
+                            {
+                                "Base": 24.0,
+                                "Value": 82.3189
+                            },
+                            {
+                                "Base": 41.0,
+                                "Value": 49.8253
+                            },
+                            {
+                                "Base": 60.0,
+                                "Value": 89.0732
+                            },
+                            {
+                                "Base": 74.0,
+                                "Value": 53.4762
+                            },
+                            {
+                                "Base": 91.0,
+                                "Value": 70.4532
+                            }
+                        ],
+                        "InterpolationMode": "PolynomialOfDegree3",
+                        "MarkerLength": 0.0,
+                        "MarkerList": [
+                            {
+                                "Base": 37.0
+                            },
+                            {
+                                "Base": 40.0
+                            }
+                        ],
+                        "MarkerWidth": 0.0,
+                        "ProfileComponent": 89.0732,
+                        "StepSize": 1.0,
+                        "TransitionMode": "StartAndEndRepeated",
+                        "ValueAxisMax": 100.0,
+                        "ValueAxisMin": 0.0
+                    },
+                    {
+                        "ActiveMarkers": false,
+                        "AvoidNegativeValues": true,
+                        "BaseAxisMax": 100,
                         "BaseComponent": 5.0,
                         "CalculateSlopes": true,
                         "FixedPointList": [
@@ -1775,104 +1873,6 @@
                         ],
                         "MarkerWidth": 0.0,
                         "ProfileComponent": 69.3793,
-                        "StepSize": 1.0,
-                        "TransitionMode": "StartAndEndRepeated",
-                        "ValueAxisMax": 100.0,
-                        "ValueAxisMin": 0.0
-                    },
-                    {
-                        "ActiveMarkers": false,
-                        "AvoidNegativeValues": true,
-                        "BaseAxisMax": 100,
-                        "BaseComponent": 0.0,
-                        "CalculateSlopes": true,
-                        "FixedPointList": [
-                            {
-                                "Base": 1.0,
-                                "Value": 63.5325
-                            },
-                            {
-                                "Base": 26.0,
-                                "Value": 33.5639
-                            },
-                            {
-                                "Base": 40.0,
-                                "Value": 69.3793
-                            },
-                            {
-                                "Base": 61.0,
-                                "Value": 69.0163
-                            },
-                            {
-                                "Base": 72.0,
-                                "Value": 79.0641
-                            },
-                            {
-                                "Base": 92.0,
-                                "Value": 68.1002
-                            }
-                        ],
-                        "InterpolationMode": "PolynomialOfDegree3",
-                        "MarkerLength": 0.0,
-                        "MarkerList": [
-                            {
-                                "Base": 37.0
-                            },
-                            {
-                                "Base": 40.0
-                            }
-                        ],
-                        "MarkerWidth": 0.0,
-                        "ProfileComponent": 79.0641,
-                        "StepSize": 1.0,
-                        "TransitionMode": "StartAndEndRepeated",
-                        "ValueAxisMax": 100.0,
-                        "ValueAxisMin": 0.0
-                    },
-                    {
-                        "ActiveMarkers": false,
-                        "AvoidNegativeValues": true,
-                        "BaseAxisMax": 100,
-                        "BaseComponent": 0.0,
-                        "CalculateSlopes": true,
-                        "FixedPointList": [
-                            {
-                                "Base": 1.0,
-                                "Value": 63.5325
-                            },
-                            {
-                                "Base": 26.0,
-                                "Value": 33.5639
-                            },
-                            {
-                                "Base": 48.0,
-                                "Value": 55.7821
-                            },
-                            {
-                                "Base": 61.0,
-                                "Value": 69.0163
-                            },
-                            {
-                                "Base": 72.0,
-                                "Value": 79.0641
-                            },
-                            {
-                                "Base": 92.0,
-                                "Value": 68.1002
-                            }
-                        ],
-                        "InterpolationMode": "PolynomialOfDegree3",
-                        "MarkerLength": 0.0,
-                        "MarkerList": [
-                            {
-                                "Base": 37.0
-                            },
-                            {
-                                "Base": 40.0
-                            }
-                        ],
-                        "MarkerWidth": 0.0,
-                        "ProfileComponent": 79.0641,
                         "StepSize": 1.0,
                         "TransitionMode": "StartAndEndRepeated",
                         "ValueAxisMax": 100.0,
