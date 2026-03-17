@@ -1,0 +1,60 @@
+{
+  "controlTypeValues": {
+    "TcHmi.Controls.Beckhoff.TcHmiBarChart": {
+      "attributes": {},
+      "themedResources": {
+        "DefaultGraphColor": {
+          "color": "rgba(225, 23, 23, 1)"
+        }
+      }
+    },
+    "TcHmi.Controls.ParisonFramework.ParisonFrameworkControl": {
+      "attributes": {},
+      "themedResources": {
+        "ParisonLayer3Color": {
+          "color": "rgba(3, 129, 144, 1)"
+        },
+        "ParisonLayer2Color": {
+          "color": "rgba(0, 29, 14, 1)"
+        },
+        "ParisonBasicLayerColor": {
+          "color": "rgba(0, 231, 172, 1)"
+        },
+        "ParisonVariableLayerBaseColor": {
+          "color": "rgba(2, 157, 104, 1)"
+        },
+        "ParisonLayer4Color": {
+          "color": "rgba(17, 27, 22, 1)"
+        },
+        "ParisonLayer5Color": {
+          "color": "rgba(128, 242, 251, 1)"
+        },
+        "ParisonSpoolColor": {
+          "color": "rgba(232, 244, 17, 1)"
+        },
+        "Parison3DBackgroundColor": {
+          "color": "rgba(232, 53, 53, 1)"
+        }
+      }
+    }
+  },
+  "controlClassValues": {
+    "inputbox_toggle_switch": {
+      "attributes": {},
+      "themedResources": {}
+    },
+    "SliderTab": {
+      "attributes": {},
+      "themedResources": {}
+    },
+    "Tiles": {
+      "attributes": {},
+      "themedResources": {}
+    },
+    "TilesHeadline": {
+      "attributes": {},
+      "themedResources": {}
+    }
+  },
+  "$schema": "./../../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/Schema/ThemeDescription.Schema.json"
+}

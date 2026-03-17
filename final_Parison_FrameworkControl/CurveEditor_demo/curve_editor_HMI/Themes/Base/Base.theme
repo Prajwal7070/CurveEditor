@@ -1,0 +1,52 @@
+{
+  "controlTypeValues": {
+    "TcHmi.Controls.ParisonFramework.ParisonFrameworkControl": {
+      "attributes": {},
+      "themedResources": {
+        "ParisonLayer2Color": {
+          "color": "rgba(119, 200, 246, 1)"
+        },
+        "ParisonLayer3Color": {
+          "color": "rgba(1, 104, 217, 1)"
+        },
+        "ParisonBasicLayerColor": {
+          "color": "rgba(0, 70, 110, 1)"
+        },
+        "Parison3DBackgroundColor": {
+          "color": "rgba(185, 201, 208, 1)"
+        },
+        "ParisonVariableLayerBaseColor": {
+          "color": "rgba(24, 156, 206, 1)"
+        },
+        "ParisonSpoolColor": {
+          "color": "rgba(0, 37, 58, 1)"
+        },
+        "ParisonLayer4Color": {
+          "color": "rgba(149, 240, 244, 1)"
+        },
+        "ParisonLayer5Color": {
+          "color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    }
+  },
+  "controlClassValues": {
+    "inputbox_toggle_switch": {
+      "attributes": {},
+      "themedResources": {}
+    },
+    "SliderTab": {
+      "attributes": {},
+      "themedResources": {}
+    },
+    "Tiles": {
+      "attributes": {},
+      "themedResources": {}
+    },
+    "TilesHeadline": {
+      "attributes": {},
+      "themedResources": {}
+    }
+  },
+  "$schema": "./../../../Packages/Beckhoff.TwinCAT.HMI.Framework.14.1.15/runtimes/native1.12-tchmi/Schema/ThemeDescription.Schema.json"
+}

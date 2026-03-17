@@ -1,0 +1,238 @@
+{
+  "$schema": "../.hmiframework/Schema/ControlDescription.Schema.json",
+  "apiVersion": 1,
+  "name": "ParisonFrameworkControl",
+  "namespace": "TcHmi.Controls.ParisonFramework",
+  "displayName": "ParisonFrameworkControl",
+  "version": {
+    "full": "1.0.0.0",
+    "major": 1,
+    "minor": 0,
+       "revision": 0,
+    "build": 0
+  },
+  "visible": true,
+  "themeable": "Standard",
+  "base": "TcHmi.Controls.System.TcHmiControl",
+  "description": "3D Parison framework with multi-layer thickness visualization.",
+  "properties": {
+    "containerControl": false,
+    "geometry": {
+      "width": 300,
+      "height": 450
+    }
+  },
+  "template": "Template.html",
+  "icons": [
+    {
+      "name": "Icons/16x16.png",
+      "width": 16,
+      "height": 16
+    }
+  ],
+  "dependencyFiles": [
+    { "name": "ParisonFrameworkControl.js", "type": "JavaScript" },
+    { "name": "Style.css", "type": "Stylesheet" },
+    { "name": "Libs/three.js", "type": "JavaScript" },
+    { "name": "Libs/OrbitControls.js", "type": "JavaScript" }
+  ],
+  "themes": {
+    "Base": {
+      "resources": [
+        { "name": "Themes/Base/Style.css", "type": "Stylesheet" }
+      ]
+    },
+    "Base-Dark": {
+      "resources": [
+        { "name": "Themes/Base-Dark/Style.css", "type": "Stylesheet" }
+      ]
+    }
+  },
+  "themedResources": [
+    {
+      "name": "ParisonBasicLayerColor",
+      "displayName": "Parison Basic Layer Color",
+      "description": "Color of the BASIC outer shell (constant blue layer).",
+      "type": "tchmi:framework#/definitions/SolidColor"
+    },
+    {
+      "name": "ParisonBasicLayerOpacity",
+      "displayName": "Parison Basic Layer Opacity",
+      "description": "Opacity for the BASIC layer (default = 0.10).",
+      "type": "tchmi:framework#/definitions/Float"
+    },
+    {
+      "name": "ParisonVariableLayerBaseColor",
+      "displayName": "Parison Variable Layer Base Color",
+      "description": "Main color for variable thickness (will be used for Layer 1).",
+      "type": "tchmi:framework#/definitions/SolidColor"
+    },
+    {
+      "name": "ParisonLayer2Color",
+      "displayName": "Parison Layer 2 Color",
+      "description": "Color for Inner variable layer (layer 2).",
+      "type": "tchmi:framework#/definitions/SolidColor"
+    },
+    {
+      "name": "ParisonLayer3Color",
+      "displayName": "Parison Layer 3 Color",
+      "description": "Color for Layer 3 (if used).",
+      "type": "tchmi:framework#/definitions/SolidColor"
+    },
+    {
+      "name": "ParisonLayer4Color",
+      "displayName": "Parison Layer 4 Color",
+      "description": "Color for Layer 4 (if used).",
+      "type": "tchmi:framework#/definitions/SolidColor"
+    },
+    {
+      "name": "ParisonLayer5Color",
+      "displayName": "Parison Layer 5 Color",
+      "description": "Color for Layer 5 (if used).",
+      "type": "tchmi:framework#/definitions/SolidColor"
+    },
+
+    {
+      "name": "ParisonSpoolColor",
+      "displayName": "Parison Inner Spool",
+      "description": "Color for inner surfaces facing inside the parison.",
+      "type": "tchmi:framework#/definitions/SolidColor"
+    },
+    {
+      "name": "ParisonSlicerPlaneColor",
+      "displayName": "Parison Slicer Plane Color",
+      "description": "Color applied to the slicing cross-sectional faces.",
+      "type": "tchmi:framework#/definitions/SolidColor"
+    },
+    {
+      "name": "Parison3DBackgroundColor",
+      "displayName": "Parison 3D Background Color",
+      "description": "Background color of the Three.js scene within the control.",
+      "type": "tchmi:framework#/definitions/SolidColor"
+    }
+  ],
+
+  "attributes": [
+    {
+      "name": "data-tchmi-points",
+      "displayName": "Fixed Points",
+      "propertyName": "FixedPoints",
+      "propertyGetterName": "getFixedPoints",
+      "propertySetterName": "setFixedPoints",
+      "visible": true,
+      "category": "Data",
+      "type": "tchmi:framework#/definitions/FixedPointList",
+      "bindable": true,
+      "defaultValue": null
+    },
+    {
+      "name": "data-tchmi-diegeometry",
+      "displayName": "Die Geometry",
+      "propertyName": "DieGeometry",
+      "propertyGetterName": "getDieGeometry",
+      "propertySetterName": "setDieGeometry",
+      "visible": true,
+      "category": "Data",
+      "type": "tchmi:framework#/definitions/DieGeometryMode",
+      "bindable": true,
+      "defaultValue": "DieMove"
+    },
+    {
+      "name": "data-tchmi-visualbasicthickness",
+      "displayName": "Visual Basic Thickness",
+      "propertyName": "VisualBasicThickness",
+      "propertyGetterName": "getVisualBasicThickness",
+      "propertySetterName": "setVisualBasicThickness",
+      "visible": true,
+      "category": "Data",
+      "type": "tchmi:framework#/definitions/ParisonThickness",
+      "bindable": true,
+      "defaultValue": 3.0
+    },
+    {
+      "name": "data-tchmi-minvisualbasicthickness",
+      "displayName": "Min Visual Basic Thickness",
+      "propertyName": "MinVisualBasicThickness",
+      "propertyGetterName": "getMinVisualBasicThickness",
+      "propertySetterName": "setMinVisualBasicThickness",
+      "visible": true,
+      "category": "Data",
+      "type": "tchmi:framework#/definitions/ParisonThickness",
+      "bindable": true,
+      "defaultValue": 1.0
+    },
+    {
+      "name": "data-tchmi-spoolcorethickness",
+      "displayName": "Spool Core Thickness",
+      "propertyName": "SpoolCoreThickness",
+      "propertyGetterName": "getSpoolCoreThickness",
+      "propertySetterName": "setSpoolCoreThickness",
+      "visible": true,
+      "category": "Data",
+      "type": "tchmi:framework#/definitions/ParisonThickness",
+      "bindable": true,
+      "defaultValue": 2.0
+    },
+    {
+      "name": "data-tchmi-spoolcoreinner",
+      "displayName": "Spool Core Inner Radius",
+      "propertyName": "SpoolCoreInner",
+      "propertyGetterName": "getSpoolCoreInner",
+      "propertySetterName": "setSpoolCoreInner",
+      "visible": true,
+      "category": "Data",
+      "type": "tchmi:framework#/definitions/ParisonRadius",
+      "bindable": true,
+      "defaultValue": 5.0
+    },
+    {
+      "name": "data-tchmi-layerpercentages",
+      "displayName": "Layer Percentages",
+      "propertyName": "LayerPercentages",
+      "propertyGetterName": "getLayerPercentages",
+      "propertySetterName": "setLayerPercentages",
+      "visible": true,
+      "description": "Comma-separated list of percentages for multi-layer thickness (e.g. 30,70 or 20,30,50). Total auto-normalized to 100%.",
+      "category": "Data",
+      "type": "tchmi:framework#/definitions/PercentageArray",
+      "bindable": true,
+      "defaultValue": "100"
+    },
+    {
+      "name": "data-tchmi-minlayerthickness",
+      "displayName": "Min Layer Thickness",
+      "propertyName": "MinLayerThickness",
+      "propertyGetterName": "getMinLayerThickness",
+      "propertySetterName": "setMinLayerThickness",
+      "visible": true,
+      "description": "Minimum thickness for inner multi-layers (mm). Prevents micro-slivers.",
+      "category": "Data",
+      "type": "tchmi:framework#/definitions/ParisonThickness",
+      "bindable": true,
+      "defaultValue": 0.01
+    },
+    {
+      "name": "data-tchmi-slicerenabled",
+      "displayName": "Slicer Enabled",
+      "propertyName": "SlicerEnabled",
+      "propertyGetterName": "getSlicerEnabled",
+      "propertySetterName": "setSlicerEnabled",
+      "visible": true,
+      "category": "3D Visualisation",
+      "type": "tchmi:framework#/definitions/BooleanValue",
+      "bindable": true,
+      "defaultValue": false
+    }
+  ],
+
+  "attributeCategories": [
+    { "name": "Data", "displayPriority": 100 },
+    { "name": "3D Visualisation", "displayPriority": 90 }
+  ],
+
+  "functions": [],
+  "events": [],
+  "dataTypes": [
+    { "schema": "Schema/Types.Schema.json" }
+  ]
+}

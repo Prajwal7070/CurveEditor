@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "definitions": {
+    "TcHmi.Controls.ParisonFramework.ParisonFrameworkControl": {
+      "type": "object",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkControlType": "ParisonFrameworkControl",
+      "frameworkControlNamespace": "TcHmi.Controls.ParisonFramework"
+    },
+
+    "DieGeometryMode": {
+      "type": "string",
+      "enum": ["PinMove", "DieMove"]
+    },
+
+    "ParisonThickness": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 50,
+      "default": 1.0
+    },
+
+    "ParisonRadius": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 200,
+      "default": 5.0
+    },
+
+    "PercentageArray": {
+      "type": "string",
+      "description": "Comma-separated % list (example: \"30,20,50\"). Will normalize to 100 automatically."
+    },
+
+    "BooleanValue": {
+      "type": "boolean",
+      "default": false
+    }
+
+    
+  }
+}
